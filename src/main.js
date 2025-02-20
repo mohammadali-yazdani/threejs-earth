@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 // Scene and Camara
 const scene = new THREE.Scene();
@@ -14,6 +15,10 @@ camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+
+// Controls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
 
 // Light
 const light = new THREE.AmbientLight(0xffffff, 1);
@@ -33,6 +38,7 @@ scene.add(earth);
 function animate() {
   requestAnimationFrame(animate);
   earth.rotation.y += 0.005;
+  controls.update();
   renderer.render(scene, camera);
 }
 animate();
