@@ -10,7 +10,6 @@ A simple 3D Earth model created using [Three.js](https://threejs.org/). The Eart
 
 - Interactive 3D Earth 🌎
 - Realistic texture
-- Smooth rotation animation
 - Responsive canvas
 
 ## 🛠️ **Installation**

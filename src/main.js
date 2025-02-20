@@ -34,10 +34,9 @@ const material = new THREE.MeshStandardMaterial({ map: earthTexture });
 const earth = new THREE.Mesh(geometry, material);
 scene.add(earth);
 
-// Rotate Animation
+// Animation
 function animate() {
   requestAnimationFrame(animate);
-  earth.rotation.y += 0.005;
   controls.update();
   renderer.render(scene, camera);
 }
